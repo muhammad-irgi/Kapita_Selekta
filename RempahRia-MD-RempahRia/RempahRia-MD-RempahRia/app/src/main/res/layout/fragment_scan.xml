@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ScanFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.camera.view.PreviewView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cameraPreview">
+
+    </androidx.camera.view.PreviewView>
+
+    <ImageButton
+        android:id="@+id/capture"
+        android:layout_width="80sp"
+        android:layout_height="80sp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="48sp"
+        android:src="@drawable/baseline_camera_24"
+        android:scaleType="centerCrop"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="#ffffff" />
+
+    <ImageButton
+        android:id="@+id/flash"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:layout_gravity="right"
+        android:layout_marginEnd="16sp"
+        android:layout_marginTop="24sp"
+        android:src="@drawable/baseline_bolt_24"
+        android:scaleType="centerCrop"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="#ffffff" />
+
+    <ImageButton
+        android:id="@+id/gallery"
+        android:layout_width="36dp"
+        android:layout_height="80sp"
+        android:src="@drawable/gallery24"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:tint="#ffffff"
+        android:scaleType="fitCenter"
+        android:layout_gravity="start|bottom"
+        android:layout_marginStart="56sp"
+        android:layout_marginBottom="48sp" />
+
+    <View
+        android:id="@+id/overlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#99000000"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Large"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:indeterminateTint="@android:color/white" />
+
+</FrameLayout>
